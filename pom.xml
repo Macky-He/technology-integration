@@ -11,6 +11,7 @@
     <groupId>com.macky</groupId>
     <artifactId>technology-integration</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
     <name>spring-boot-technology-integration</name>
     <description>Demo project for Spring Boot</description>
 
