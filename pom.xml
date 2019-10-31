@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.macky</groupId>
-    <artifactId>spring-boot-technology-integration</artifactId>
+    <artifactId>technology-integration</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-technology-integration</name>
     <description>Demo project for Spring Boot</description>
