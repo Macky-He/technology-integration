@@ -1,5 +1,6 @@
 package com.macky.springboottechnologyintegration.controller;
 
+import com.macky.springboottechnologyintegration.entity.dto.JsonResponse;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloJenkins {
 
     @RequestMapping("/jenkins")
-    public String helloJenkins(){
-        return "Hello Jenkins!!! this is first change!   Test Hooks...";
+    public JsonResponse helloJenkins() {
+        String result = "hello jenkins,异常统一处理controllerAdvice已完成！";
+        return new JsonResponse().success(result);
     }
 }
