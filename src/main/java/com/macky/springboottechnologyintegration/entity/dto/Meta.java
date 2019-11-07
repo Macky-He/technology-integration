@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * @author Macky
@@ -25,13 +26,13 @@ public class Meta {
     public Meta(boolean success) {
         this.success = success;
         this.message = "成功";
-        this.timestamp = LocalDateTime.now().toString();
+        this.timestamp = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SSS").format(LocalDateTime.now());
     }
 
     public Meta(boolean success, String message) {
         this.success = success;
         this.message = message;
-        this.timestamp = LocalDateTime.now().toString();
+        this.timestamp = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SSS").format(LocalDateTime.now());
     }
 
     public boolean isSuccess() {

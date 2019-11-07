@@ -16,7 +16,7 @@ public class HelloJenkins {
 
     @RequestMapping("/jenkins")
     public JsonResponse helloJenkins() {
-        String result = "hello jenkins,异常统一处理controllerAdvice已完成！";
+        String result = "异常统一处理controllerAdvice已完成！统一返回修改成功！";
         return new JsonResponse().success(result);
     }
 }

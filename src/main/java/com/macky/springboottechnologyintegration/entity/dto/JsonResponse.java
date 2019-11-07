@@ -12,20 +12,20 @@ import lombok.Data;
  */
 @Data
 @ApiModel(value = "返回结果")
-public class JsonResponse {
+public class JsonResponse<T> {
     private static final String SUCCESS = "ok";
     private static final String ERROR = "error";
     @ApiModelProperty(value = "返回状态和信息", name = "meta")
     private Meta meta;
     @ApiModelProperty(value = "返回数据", name = "data")
-    private Object data;
+    private T data;
 
     public JsonResponse success() {
         this.meta = new Meta(true, SUCCESS);
         return this;
     }
 
-    public JsonResponse success(Object data) {
+    public JsonResponse success(T data) {
         this.meta = new Meta(true, SUCCESS);
         this.data = data;
         return this;
