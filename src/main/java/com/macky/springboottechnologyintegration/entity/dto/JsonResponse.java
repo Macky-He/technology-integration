@@ -2,7 +2,9 @@ package com.macky.springboottechnologyintegration.entity.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author Macky
@@ -11,6 +13,8 @@ import lombok.Data;
  * @date 2019/11/6 10:21
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @ApiModel(value = "返回结果")
 public class JsonResponse<T> {
     private static final String SUCCESS = "ok";
@@ -32,6 +36,11 @@ public class JsonResponse<T> {
     }
 
     public JsonResponse failure() {
+        this.meta = new Meta(false, ERROR);
+        return this;
+    }
+
+    public JsonResponse failure(T t) {
         this.meta = new Meta(false, ERROR);
         return this;
     }

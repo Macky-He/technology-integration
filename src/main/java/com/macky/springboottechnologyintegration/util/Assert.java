@@ -48,4 +48,6 @@ public interface Assert {
             throw newException(args);
         }
     }
+
+    String getMessage();
 }

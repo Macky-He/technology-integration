@@ -1,6 +1,5 @@
 package com.macky.springboottechnologyintegration.util;
 
-import com.macky.springboottechnologyintegration.entity.enums.ResponseEnum;
 import com.macky.springboottechnologyintegration.exception.BaseException;
 import com.macky.springboottechnologyintegration.exception.ServiceException;
 
@@ -14,18 +13,18 @@ import java.text.MessageFormat;
  */
 public interface BusinessExceptionAssert extends Assert {
 
-    @Override
-    default BaseException newException(Object... args) {
-        String msg = MessageFormat.format(this.getMessage(), args);
-
-        return new ServiceException(this, args, msg);
-    }
-
-    @Override
-    default BaseException newException(Throwable t, Object... args) {
-        String msg = MessageFormat.format(this.getMessage(), args);
-
-        return new ServiceException(this, args, msg, t);
-    }
+//    @Override
+//    default ServiceException newException(Object... args) {
+//        String msg = MessageFormat.format(this.getMessage(), args);
+//
+//        return new ServiceException(this, args, msg);
+//    }
+//
+//    @Override
+//    default BaseException newException(Throwable t, Object... args) {
+//        String msg = MessageFormat.format(this.getMessage(), args);
+//
+//        return new ServiceException(this, args, msg, t);
+//    }
 
 }

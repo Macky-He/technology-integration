@@ -1,5 +1,7 @@
 package com.macky.springboottechnologyintegration.exception;
 
+import com.macky.springboottechnologyintegration.entity.enums.ResponseEnum;
+
 /**
  * @Title class ServiceException
  * @Description: TODO
@@ -8,4 +10,7 @@ package com.macky.springboottechnologyintegration.exception;
  */
 public class ServiceException extends BaseException {
 
+    public ServiceException(ResponseEnum responseEnum) {
+        super(responseEnum);
+    }
 }

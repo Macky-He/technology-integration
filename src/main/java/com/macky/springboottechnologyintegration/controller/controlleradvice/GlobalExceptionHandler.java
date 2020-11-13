@@ -32,7 +32,7 @@ public class GlobalExceptionHandler {
     {
         log.error("[GlobalExceptionHandler][businessExceptionHandler] exception",e);
 
-        return new JsonResponse(e.getCode(),e.getMessage());
+        return new JsonResponse().failure(e.getMessage());
     }
 
     /**
@@ -46,6 +46,6 @@ public class GlobalExceptionHandler {
     public Object exceptionHandler(HttpServletRequest request,HttpServletResponse response,Exception e)
     {
         log.error("[GlobalExceptionHandler][exceptionHandler] exception",e);
-        return new JsonResponse(ResponseEnum.ERROR);
+        return new JsonResponse().failure(ResponseEnum.ERROR);
     }
 }

@@ -1,0 +1,11 @@
+
+# redis配置
+spring:
+  redis:
+    host: 115.159.75.168
+    port: 6379
+    password: MWlaqwx4Fwq$cS
+    database: 2
+    timeout: 5000ms
+server:
+  port: 8080

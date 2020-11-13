@@ -10,7 +10,7 @@ import com.macky.springboottechnologyintegration.util.BusinessExceptionAssert;
  * @Description: TODO
  * @date 2020/5/25
  */
-public enum ResponseEnum implements BusinessExceptionAssert {
+public enum ResponseEnum {
 
     ERROR(0,"系统异常"),
     SUCESS(1,"成功");
